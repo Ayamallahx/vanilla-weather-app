@@ -1,3 +1,51 @@
+.weather-app {
+  border: 1px solid #dadde1;
+  width: 600px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px grey;
+  font-family: "Rajdhani", sans-serif;
+  padding: 20px;
+}
 h1 {
-  color: darkolivegreen;
+  color: #878787;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.col-sm-4.details {
+  margin-left: 40px;
+}
+.current-weather {
+  margin-left: 150px;
+}
+li {
+  list-style: none;
+  color: #878787;
+  font-size: 15px;
+}
+.fas {
+  font-size: 25px;
+  color: #878787;
+}
+.fa-sun {
+  font-size: 60px;
+}
+h5 {
+  margin-left: 25px;
+  padding-top: 50px;
+}
+.five-day {
+  padding: 6px;
+  text-align: center;
+}
+.five-day:hover {
+  opacity: 0.6;
+}
+#github {
+  text-align: center;
+  font-size: 13px;
 }
