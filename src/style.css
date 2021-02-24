@@ -5,7 +5,7 @@
 .weather-app {
   border: 1px solid #dadde1;
   width: 600px;
-  margin: 30px auto;
+  margin: 10px auto;
   border-radius: 10px;
   box-shadow: 5px 5px 10px grey;
   font-family: "Rajdhani", sans-serif;
@@ -42,7 +42,7 @@ li::first-letter {
   font-size: 60px;
 }
 h5 {
-  padding-top: 30px;
+  padding-top: 20px;
   margin-left: 20px;
 }
 .five-day {
@@ -54,6 +54,8 @@ h5 {
   opacity: 0.6;
 }
 #github {
+  margin: 0;
+  padding: 0;
   text-align: center;
   font-size: 13px;
 }

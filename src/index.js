@@ -42,8 +42,36 @@ function displayWeather(response) {
     icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     icon.setAttribute("alt", response.data.weather[0].description);
 }
-let city = "london"
+function search(city) {
 let apiKey = "4c4b730fc952d2218d8c25bb1938764c";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-
 axios.get(apiUrl).then(displayWeather);
+}
+
+function submitCity(event) {
+    event.preventDefault();
+    let cityInput = document.querySelector("#city-input");
+    console.log(cityInput.value);
+    search(cityInput.value);
+}
+
+let form = document.querySelector("#search-form")
+form.addEventListener("submit", submitCity);
+
+function showPosition(position) {
+  let apiKey = "4c4b730fc952d2218d8c25bb1938764c";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let locationButton = document.querySelector("#location-button");
+locationButton.addEventListener("click", getCurrentPosition);
+
+
