@@ -1,3 +1,7 @@
+.container {
+  margin: 0 auto;
+  display: block;
+}
 .weather-app {
   border: 1px solid #dadde1;
   width: 600px;
@@ -9,7 +13,7 @@
 }
 h1 {
   color: #878787;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 8px;
 }
 ul {
@@ -23,10 +27,12 @@ ul {
   margin-left: 150px;
 }
 li {
-  text-transform: capitalize;
   list-style: none;
   color: #878787;
   font-size: 15px;
+}
+li::first-letter {
+  text-transform: capitalize;
 }
 .fas {
   font-size: 25px;
@@ -36,12 +42,13 @@ li {
   font-size: 60px;
 }
 h5 {
-  margin-left: 25px;
-  padding-top: 50px;
+  padding-top: 30px;
+  margin-left: 20px;
 }
 .five-day {
   padding: 6px;
   text-align: center;
+  margin: 0;
 }
 .five-day:hover {
   opacity: 0.6;
