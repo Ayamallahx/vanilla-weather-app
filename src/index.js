@@ -1,6 +1,6 @@
 function formatDate(timestamp) {
     let date = new Date(timestamp);
-    
+
     let hours = date.getHours();
     if (hours < 10) {
         hours = `0${hours}`;
@@ -19,7 +19,6 @@ function formatDate(timestamp) {
 
 
 function displayWeather(response) {
-    console.log(response.data)
 
     let temperature = document.querySelector("#celcius-temp");
     temperature.innerHTML = Math.round(response.data.main.temp);
@@ -38,11 +37,13 @@ function displayWeather(response) {
 
     let date = document.querySelector("#date");
     date.innerHTML = formatDate(response.data.dt * 1000);
-}
 
+    let icon = document.querySelector("#icon");
+    icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    icon.setAttribute("alt", response.data.weather[0].description);
+}
+let city = "london"
 let apiKey = "4c4b730fc952d2218d8c25bb1938764c";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=london&units=metric&appid=${apiKey}`;
-console.log(apiKey);
-console.log(apiUrl);
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
 axios.get(apiUrl).then(displayWeather);
