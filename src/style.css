@@ -23,6 +23,7 @@ ul {
   margin-left: 150px;
 }
 li {
+  text-transform: capitalize;
   list-style: none;
   color: #878787;
   font-size: 15px;
@@ -48,4 +49,9 @@ h5 {
 #github {
   text-align: center;
   font-size: 13px;
+}
+.measurement {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
