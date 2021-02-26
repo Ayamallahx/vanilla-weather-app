@@ -16,6 +16,13 @@ h1 {
   font-size: 40px;
   margin-bottom: 8px;
 }
+h3 {
+  font-size: 16px;
+  color: #413c69;
+}
+.weather-forecast-temp {
+  font-size: 14px;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -49,6 +56,9 @@ h5 {
   padding: 6px;
   text-align: center;
   margin: 0;
+}
+.weather-forecast-temp {
+  margin-top: 5px;
 }
 .five-day:hover {
   opacity: 0.6;

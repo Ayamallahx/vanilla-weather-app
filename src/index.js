@@ -28,8 +28,8 @@ function formatDate(timestamp) {
 function displayWeather(response) {
   let celciusTemp = response.data.main.temp;
 
-  let temperature = document.querySelector("#current-temp");
-  temperature.innerHTML = Math.round(celciusTemp);
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = Math.round(celciusTemp);
 
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
