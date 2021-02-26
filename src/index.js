@@ -26,7 +26,7 @@ function formatDate(timestamp) {
 }
 
 function displayWeather(response) {
-  let celciusTemp = response.data.main.temp;
+  celciusTemp = response.data.main.temp;
 
   let currentTemp = document.querySelector("#current-temp");
   currentTemp.innerHTML = Math.round(celciusTemp);
@@ -66,6 +66,8 @@ function submitCity(event) {
   console.log(cityInput.value);
   search(cityInput.value);
 }
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", submitCity);
 
 function showPosition(position) {
   let apiKey = "4c4b730fc952d2218d8c25bb1938764c";
@@ -79,24 +81,26 @@ function getCurrentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+let locationButton = document.querySelector("#location-button");
+locationButton.addEventListener("click", getCurrentPosition);
 
 function showF(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#current-temp");
-  let farenheitTemp = Math.round((celciusTemp * 9) / 5) + 32;
+  let farenheitTemp = Math.round((celciusTemp * 9/5) + 32);
   currentTemp.innerHTML = farenheitTemp;
+  celciusChange.classList.remove("active");
+  farenheitChange.classList.add("active");
 }
+
 function showC(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = Math.round(celciusTemp);
+    event.preventDefault();
+    let currentTemp = document.querySelector("#current-temp");
+    currentTemp.innerHTML = Math.round(celciusTemp);
+    celciusChange.classList.add("active");
+    farenheitChange.classList.remove("active");
+    console.log(celciusTemp)
 }
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", submitCity);
-
-let locationButton = document.querySelector("#location-button");
-locationButton.addEventListener("click", getCurrentPosition);
-
 let celciusTemp = null;
 
 let farenheitChange = document.querySelector("#farenheit-change");
@@ -104,3 +108,4 @@ farenheitChange.addEventListener("click", showF);
 
 let celciusChange = document.querySelector("#celcius-change");
 celciusChange.addEventListener("click", showC);
+
