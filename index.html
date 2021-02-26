@@ -25,9 +25,14 @@
     <div class="container">
       <div class="weather-app">
         <form id="search-form" class="mb-3">
-          <input type="search" placeholder="Enter a city..." autocomplete="off" id="city-input">
-          <input type="submit" value="Search" id="search-button">
-          <input type="submit" value="📍" id="location-button">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            autocomplete="off"
+            id="city-input"
+          />
+          <input type="submit" value="Search" id="search-button" />
+          <input type="submit" value="📍" id="location-button" />
         </form>
         <h1 id="city"></h1>
         <ul>
@@ -36,10 +41,10 @@
         </ul>
         <div class="row">
           <div class="col-sm-4 current-weather">
-            <img src="" alt="" id="icon">
-          <span id="current-temp"></span>
-           <a href=""  class="active" id="celcius-change">°C</a> |
-          <span id="farenheit-temp"></span>
+            <img src="" alt="" id="icon" />
+            <span id="current-temp"></span>
+            <a href="" class="active" id="celcius-change">°C</a> |
+            <span id="farenheit-temp"></span>
             <a href="" class="measurement" id="farenheit-change">°F</a>
           </div>
           <div class="col-sm-4 details">
@@ -48,74 +53,19 @@
               <li>Wind: <span id="wind"></span>km/h</li>
             </ul>
           </div>
-            <h5>5 Day Forecast</h5>
-            <div class="row weather-forecast" id="forecast">
-              <div class="col five-day">
-                <h3>
-                  Sat.
-                </h3>
-                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png">
-                  <div class="weather-forecast-temp">
-                   <strong>9°</strong> 6°
-                  </div>
-              </div>
-              <div class="col five-day">
-                <h3>
-                  Sun.
-                </h3>  
-                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png">
-
-                  <div class="weather-forecast-temp"> 
-                   <strong>10°</strong> 9° 
-                  </div>
-              </div>
-              <div class="col five-day">
-                <h3>
-                  Mon.
-                </h3> 
-                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"> 
-                  <div class="weather-forecast-temp">
-                   <strong>10°</strong> 10°
-                  </div>
-              </div>
-              <div class="col five-day">
-                <h3>
-                  Tue.
-                </h3>  
-                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png">
-                  <div class="weather-forecast-temp"> 
-                   <strong>6°</strong> 10°
-                  </div>
-              </div>
-              <div class="col five-day">
-                <h3>
-                  Wed.
-                </h3> 
-                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"> 
-                  <div class="weather-forecast-temp">
-                  <strong>6°</strong> 6°
-                  </div>
-              </div>
-              <div class="col five-day">
-                <h3>
-                  Thu.
-                </h3>  
-                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png">
-                  <div class="weather-forecast-temp">
-                    <strong>6°</strong> 6°
-                  </div>
-              </div>
-             </div>
-           </div>
-         </div>
-      <div id="github">
-          <a
-            href="https://github.com/Ayamallahx/vanilla-weather-app"
-            target="_blank"
-            >Open-source code</a
-          >
-          by Aya Mallah
+          <h5>5 Day Forecast</h5>
+          <div class="row weather-forecast" id="forecast"></div>
+        </div>
       </div>
+    </div>
+    <div id="github">
+      <a
+        href="https://github.com/Ayamallahx/vanilla-weather-app"
+        target="_blank"
+        >Open-source code</a
+      >
+      by Aya Mallah
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>

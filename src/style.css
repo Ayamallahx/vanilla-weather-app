@@ -17,8 +17,9 @@ h1 {
   margin-bottom: 8px;
 }
 h3 {
-  font-size: 16px;
+  font-size: 15px;
   color: #413c69;
+  text-align: center;
 }
 .weather-forecast-temp {
   font-size: 14px;
@@ -59,6 +60,7 @@ h5 {
 }
 .weather-forecast-temp {
   margin-top: 5px;
+  text-align: center;
 }
 .five-day:hover {
   opacity: 0.6;
@@ -83,4 +85,8 @@ h5 {
 }
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 90px;
 }
