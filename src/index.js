@@ -70,13 +70,11 @@ for (let index = 0; index < 6; index++) {
       ${formatHours(temp.dt * 1000)}
     </h3>
     <img src="http://openweathermap.org/img/wn/${temp.weather[0].icon}@2x.png">
-     <div class="weather-forecast-temp" >
+     <div class="weather-forecast-temp">
        <strong>${Math.round(temp.main.temp_max)}°</strong>   ${Math.round(temp.main.temp_min)}°
      </div>
     </div>`;
 }
-
-
 }
 
 function search(city) {
