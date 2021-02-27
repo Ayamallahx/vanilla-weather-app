@@ -70,9 +70,9 @@ h5 {
 .five-day:hover {
   opacity: 0.6;
 }
-#github {
-  margin: 0;
-  padding: 0;
+.github {
+  margin: 0 auto;
+  display: block;
   text-align: center;
   font-size: 13px;
 }
