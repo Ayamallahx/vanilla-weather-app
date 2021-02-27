@@ -89,7 +89,6 @@ function search(city) {
 function submitCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
-  console.log(cityInput.value);
   search(cityInput.value);
 }
 let form = document.querySelector("#search-form");
@@ -126,7 +125,6 @@ function showC(event) {
   currentTemp.innerHTML = Math.round(celciusTemp);
   celciusChange.classList.add("active");
   farenheitChange.classList.remove("active");
-  console.log(celciusTemp);
 }
 let celciusTemp = null;
 

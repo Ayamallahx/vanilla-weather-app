@@ -32,18 +32,19 @@ ul {
   margin: 0;
   padding: 0;
 }
-.col-sm-4.details {
-  margin-left: 40px;
+.col-4.details {
+  margin-left: 30px;
+  padding-left: 40px;
 }
 .current-weather {
-  margin-left: 150px;
+  margin-left: 160px;
 }
 li {
   list-style: none;
   color: #23689b;
   font-size: 16px;
 }
-li::first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 .fas {
@@ -70,8 +71,6 @@ h5 {
   opacity: 0.6;
 }
 #github {
-  margin: 0;
-  padding: 0;
   text-align: center;
   font-size: 13px;
 }
