@@ -100,7 +100,9 @@ function showPosition(position) {
   let lon = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayWeather);
-  
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentPosition(event) {
@@ -134,4 +136,4 @@ farenheitChange.addEventListener("click", showF);
 let celciusChange = document.querySelector("#celcius-change");
 celciusChange.addEventListener("click", showC);
 
-search("New York");
+search("London");
